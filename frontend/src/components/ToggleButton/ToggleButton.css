@@ -16,7 +16,7 @@
 .toggle-button__line{
     width: 45px;
     height: 4px;
-    background: white;
+    background: #fab702;
     z-index: 250;
     transition: all 0.5s;
     border-radius: 5px;

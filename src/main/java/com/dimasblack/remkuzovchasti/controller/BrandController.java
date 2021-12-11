@@ -29,7 +29,6 @@ public class BrandController {
         return brand;
     }
 
-
     @PostMapping
     public AutoBrand createAutoBrand(@RequestParam("brand") String brand, @RequestParam("file") MultipartFile file) throws IOException {
         return autoBrandService.createBrand(brand, file);

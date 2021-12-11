@@ -1,0 +1,33 @@
+.data-table{
+    width: 100%;
+}
+
+.data-table img{
+    width: 40px;
+    height: 40px;
+}
+
+
+.data-table th{
+    width: 10%;
+}
+
+.data-table td{
+    text-align: center;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+}
+
+.btn-cancel{
+    width: 30px;
+    background-color: #1f1f1d;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 4px 0;
+}
+
+.btn-cancel:hover{
+    cursor: pointer;
+    background-color: #495057;
+}

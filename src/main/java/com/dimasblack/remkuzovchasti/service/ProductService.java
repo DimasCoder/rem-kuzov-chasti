@@ -1,8 +1,8 @@
 package com.dimasblack.remkuzovchasti.service;
 
-import com.dimasblack.remkuzovchasti.model.AutoModel;
 import com.dimasblack.remkuzovchasti.model.FileEntity;
 import com.dimasblack.remkuzovchasti.model.Product;
+import com.dimasblack.remkuzovchasti.repo.AutoModelRepo;
 import com.dimasblack.remkuzovchasti.repo.ProductRepo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +18,14 @@ public class ProductService {
     @Autowired
     ProductRepo productRepo;
 
+    @Autowired
+    AutoModelRepo autoModelRepo;
+
     public Iterable<Product> findAllProducts(){
-        return productRepo.findAll(Sort.by(Sort.Direction.ASC, "productName"));
+        return productRepo.findAll(Sort.by(Sort.Direction.ASC, "id"));
     }
 
-    public Product createProduct(String productName, int price, int code, MultipartFile file) throws IOException {
+    public Product createProduct(String productName, int price, String code, Long model, MultipartFile file) throws IOException {
         Product product = new Product();
         if(productRepo.getProductByProductName(productName) == null ) {
             product.setProductName(productName);
@@ -34,6 +37,7 @@ public class ProductService {
         product.setCode(code);
         product.setAvailable(true);
         product.setCountOfSold(0);
+        product.setModel(autoModelRepo.getById(model));
 
         FileEntity fileEntity = new FileEntity();
         fileEntity.setName(StringUtils.cleanPath(file.getOriginalFilename()));

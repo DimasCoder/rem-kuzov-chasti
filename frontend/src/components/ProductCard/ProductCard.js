@@ -1,38 +1,38 @@
 import React from 'react'
 import './ProductCard.css'
-import logo from '../../assets/rem-komplect.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCheckCircle, faTimesCircle} from '@fortawesome/free-solid-svg-icons'
 
 const ProductCard = props => {
-    let avalaibility = props.product.productName
-    let available
-    if(avalaibility){
-        available = <div>В наявності <FontAwesomeIcon style={{ color: "green" }} icon={faCheckCircle} /></div>
-    }else{
-        available = <div>Нема в наявності <FontAwesomeIcon style={{ color: "red" }} icon={faTimesCircle} /></div>
+    let avalaibility = props.product.available
+    let available;
+    if (avalaibility) {
+        available = <span className="span-available"><p>В наявності</p> <FontAwesomeIcon style={{color: "green"}}
+                                                                                         icon={faCheckCircle}/></span>
+    } else {
+        available = <span className="span-available"><p>Нема в наявності</p> <FontAwesomeIcon style={{color: "red"}}
+                                                                                              icon={faTimesCircle}/></span>
     }
 
-    //let image = 'data:image/png;base64,' + props.product.file.data;
+    let image = 'data:image/png;base64,' + props.product.file.data;
 
     return (
 
-        <div className="auto-card-container">
-            <p>{props.product.productName}</p>
+        <div className="auto-card-container" key={props.id}>
             <img
-                src={logo}
+                src={image}
                 alt="Auto"
                 className="auto-logo"/>
+            <p>SKU-63920724</p>
+            <h3>{props.product.productName}</h3>
             <div className="auto-brand-card-footer">
-                <div>
-                    <p className="price">Ціна</p>
-                    <span>{props.product.price} грн</span>
-                </div>
-                <div className="availability">
-                    {available}
-                </div>
+                <span>₴{props.product.price}.00</span>
+                <button className="to-cart" onClick={() => {
+                    props.addToCart(props.product)
+                }}></button>
             </div>
 
         </div>
-    )}
+    )
+}
 export default ProductCard;

@@ -1,52 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 .auto-card-container{
-    width: 40%;
+    width: 230px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 4px;
-    padding: 15px;
+    justify-content: space-between;
     transition: all 0.3s;
-    background: linear-gradient(
-            0deg
-            ,rgba(88,88,88,.1) 0%,transparent 46.76%),#fff;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 1px 3px rgb(0 0 0 / 9%);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 9%);
+    margin-bottom: 20px;
 }
 
-.auto-card-container:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+.auto-card-container:hover {
     cursor: pointer;
     transition: all 0.3s;
 }
 
+.to-cart:hover{
+    box-shadow: 0 0 0 0 rgba(236, 143, 3, 0);
+    text-decoration: none !important;
+    color: #fff;
+    background-color: #fab702 !important;
+    border-radius: 50%;
+    fill: #1f1f1d;
+}
+
+.auto-card-container:hover .to-cart{
+    box-shadow: 0 0 0 0 rgba(236, 143, 3, 0);
+    text-decoration: none !important;
+    color: #fff;
+    background-color: #a4a4a4;
+    border-radius: 50%;
+}
+
 .auto-logo{
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px 0;
-    border: 1px solid #919191;
+    padding: 10px;
 }
 
 .auto-card-container p{
-    font-size: 14px;
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    color: #999999;
+    padding: 0px 10px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.auto-card-container h3{
+    font-size: 16px;
+    line-height: 19px;
+    color: #262626;
+    padding: 5px 10px 0px 10px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .auto-card-container span{
     font-size: 18px;
+    line-height: 18px;
+    font-family: "Roboto", sans-serif;
+    color: #262626;
+    margin: auto 0;
+    font-weight: 500;
 }
 
 .auto-brand-card-footer{
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    font-weight: 400;
 }
 
 .availability{
     margin: auto 0;
+    font-weight: 100;
 }
+
+.span-available{
+    display: flex;
+}
+
+.span-available p{
+    font-size: 14px;
+    margin: auto 5px auto 0;
+}
+
+.to-cart{
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    background:url("../../assets/shopping-cart.svg") no-repeat;
+    background-size: 18px;
+    border: none;
+    background-position: 45% 50%;
+    padding: 18px;
+    position: relative;
+    z-index: 0;
+    -webkit-transition: color .2s;
+    transition: .2s;
+    border-radius: 50%;
+}
+
+
+@media all and (max-width: 500px) {
+    .auto-card-container {
+        width: 45%;
+    }
+}
+
 
 @media all and (max-width: 450px) {
     .auto-card-container {
-        width: 40%;
         margin: 10px auto;
+        /*width: 190px;*/
+    }
+}
+
+@media all and (max-width: 420px) {
+    .auto-card-container {
+        margin: 10px auto;
+        /*width: 180px;*/
     }
 }

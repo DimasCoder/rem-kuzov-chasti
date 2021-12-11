@@ -1,18 +1,23 @@
 package com.dimasblack.remkuzovchasti.controller;
 
+import com.dimasblack.remkuzovchasti.model.AutoModel;
+import com.dimasblack.remkuzovchasti.model.User;
+import com.dimasblack.remkuzovchasti.service.UserDetailsServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/test")
 public class TestController {
+
+    @Autowired
+    UserDetailsServiceImpl userDetailsServiceImpl;
+
     @GetMapping("/all")
-    public String allAccess() {
-        return "Public Content.";
+    public Iterable<User> allAccess() {
+        return userDetailsServiceImpl.findAllUsers();
     }
 
     @GetMapping("/user")

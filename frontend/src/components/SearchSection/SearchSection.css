@@ -1,4 +1,5 @@
 .search-section-container{
+    position: relative;
     width: 100%;
     display: flex;
     margin-bottom: 30px;
@@ -18,8 +19,8 @@
 
 .search-section-container .search-icon{
     margin: auto 0;
-    width: 19px!important;
-    height: 19px!important;
+    width: 20px!important;
+    height: 20px!important;
     background-color: #fff;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -29,7 +30,6 @@
 }
 
 .search-section-container .input-search{
-    height: 35px;
     width: 100%;
     margin: auto 0;
     transition: all 0.3s;
@@ -44,29 +44,24 @@
 
 .search-section-container .input-search:focus{
     outline: none;
-
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .input-search:focus.search-icon{
     background-color: #fff;
     width: 100%;
     outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
 }
 
 .mercedes-image{
     position: absolute;
-    right: 9%;
-    top: 14%;
-    width: 21%;
+    right: -18px;
+    top: -55px;
+    width: 300px;
     min-width: 170px;
     transform: scaleX(-1);
-}
-
-@media all and (max-width: 700px){
-    .mercedes-image{
-        right: 10px;
-        top: 80px;
-    }
 }
 
 @media all and (max-width: 550px){

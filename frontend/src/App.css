@@ -6,8 +6,42 @@
   background-color:  #3282b8;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #d6d6d6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fab027;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fab027;
+}
+
 body{
-  font-family: "Oswald", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fafafa;
+}
+
+input{
+  padding: 8px 15px;
+  width: 300px;
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 3px;
+  font-size: 14px;
+  color: rgba(0,0,0,0.8);
+  transition: linear 0.3s;
+}
+
+input:focus{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .container{
@@ -16,12 +50,12 @@ body{
 }
 @media all and (max-width: 1300px){
   .container{
-    width: 90%;
+    width: 85%;
   }
 }
 @media all and (max-width: 1150px) {
   .container{
-    width: 95%;
+    width: 90%;
   }
 }
 

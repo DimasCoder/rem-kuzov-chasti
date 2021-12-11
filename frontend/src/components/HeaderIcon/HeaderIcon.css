@@ -1,0 +1,24 @@
+.icon-container{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.header-icon{
+    margin: auto 6px auto 0;
+    color: #fab702;
+    height: 12px;
+}
+
+.icon-container a{
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.icon-container:hover a{
+    color: #fab702;
+}

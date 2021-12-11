@@ -42,7 +42,6 @@ public class AutoModelService {
     }
 
     public void deleteModel(AutoModel model){
-
-        autoModelRepo.delete(model);
+        autoModelRepo.deleteModel(model.getId());
     }
 }

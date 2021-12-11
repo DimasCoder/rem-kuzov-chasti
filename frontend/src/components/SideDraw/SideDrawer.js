@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from "react-scroll";
 import './SideDrawer.css'
 import logo from "../../assets/rem7.png";
+import {NavLink} from "react-router-dom";
 
 const SideDrawer = props => {
     let drawerClasses = 'side-drawer';
@@ -18,8 +19,11 @@ const SideDrawer = props => {
                 />
             </div>
             <nav className="side-drawer__navigation">
-                <Link className="side-drawer__navigation-link">Головна</Link>
-                <Link className="side-drawer__navigation-link">Каталог</Link>
+                <Link to="/" className="side-drawer__navigation-link">Головна</Link>
+                <Link to="/catalog" className="side-drawer__navigation-link">Каталог</Link>
+                <Link to="/reviews" className="side-drawer__navigation-link">Відгуки</Link>
+                <Link to="/contact" className="side-drawer__navigation-link">Контакти</Link>
+                <Link to="/aboutUs" className="side-drawer__navigation-link">Про нас</Link>
 
             </nav>
             <div className="side-drawer__contact">

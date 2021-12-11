@@ -2,8 +2,12 @@ package com.dimasblack.remkuzovchasti.model;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -17,9 +21,14 @@ public class AutoModel {
 
     private String modelName;
 
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonIgnore
+    @JsonIgnoreProperties("models")
     private AutoBrand brand;
+
+    @OneToMany(mappedBy = "model")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private List<Product> products = new ArrayList<>();
 
     public String getModelName() {
         return modelName;
