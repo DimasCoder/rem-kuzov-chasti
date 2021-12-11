@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = 'http://localhost:8080/api/test/';
+const API_URL = 'https://remkuzovchasti.herokuapp.com/api/test/';
 
 class UserService {
     getPublicContent() {
@@ -9,7 +9,7 @@ class UserService {
     }
 
     getBrandsContent() {
-        return axios.get("http://localhost:8080/api/brand/all");
+        return axios.get("https://remkuzovchasti.herokuapp.com/api/brand/all");
     }
 
     getUserBoard() {

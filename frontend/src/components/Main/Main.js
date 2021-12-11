@@ -20,7 +20,7 @@ const Main = (props) => {
     useEffect(() => {
         const fetchBrands = async () => {
             const brandsResult = await axios(
-                "http://localhost:8080/api/brand/all",
+                "https://remkuzovchasti.herokuapp.com/api/brand/all",
             )
             setBrands([...brands, ...brandsResult.data])
 
@@ -33,7 +33,7 @@ const Main = (props) => {
         if (brandID === 0) return
         const fetchModels = async () => {
             const modelsResult = await axios(
-                `http://localhost:8080/api/model/?brand=${brandID}`,
+                `https://remkuzovchasti.herokuapp.com/api/model/?brand=${brandID}`,
             );
             setModels([...initialState, ...modelsResult.data])
             setModelID((models.shift().id))
