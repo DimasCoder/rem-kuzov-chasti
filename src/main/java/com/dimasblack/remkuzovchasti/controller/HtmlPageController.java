@@ -19,7 +19,10 @@ public class HtmlPageController {
     public String admin(){
         return "index.html";
     }
-
+    @GetMapping("/signup")
+    public String signUp(){
+        return "index.html";
+    }
     @GetMapping("/admin-panel")
     public String adminPage(){
         return "index.html";
