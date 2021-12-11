@@ -162,8 +162,8 @@ class App extends Component {
                         <Route exact path="/:brand/:model" component={AutoPage}/>
                         <Route exact path={["/", "/home"]} component={Home}/>
                         <Route exact path="/admin" component={Login}/>
-                        <Route exact path="/signup" component={Register}/>
-                        <Route exact path="/register" component={Register}/>
+                        <Route exact path="/signup" component={Login}/>
+                        <Route exact path="/registration" component={Register}/>
                         <Route exact path="/checkout"
                                render={() =>
                                    <Checkout
