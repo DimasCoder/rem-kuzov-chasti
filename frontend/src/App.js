@@ -159,7 +159,6 @@ class App extends Component {
                     {backdrop}
                     <Switch>
                         <Route exact path="/" render={() => <MainSection cartItems={this.state.cartItems} addToCart={this.addToCart} q={q}/>}/>
-                        {/*<Router exact path="/" component={MainSection}/>*/}
                         <Route exact path="/:brand/:model" component={AutoPage}/>
                         <Route exact path={["/", "/home"]} component={Home}/>
                         <Route exact path="/admin" component={Login}/>
@@ -173,7 +172,6 @@ class App extends Component {
                                        decreaseItem={this.decreaseItem}
                                        removeFromCart={this.removeFromCart}/>}
                         />
-                        <Route exact path="/profile" component={Profile}/>
                         <Route exact path="/admin-panel" render={() => <AdminPanel logOut={this.logOut} user={currentUser} />}/>
                     </Switch>
                 </Router>

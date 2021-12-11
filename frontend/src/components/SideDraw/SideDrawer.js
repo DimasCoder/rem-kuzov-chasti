@@ -19,11 +19,12 @@ const SideDrawer = props => {
                 />
             </div>
             <nav className="side-drawer__navigation">
-                <Link to="/" className="side-drawer__navigation-link">Головна</Link>
-                <Link to="/catalog" className="side-drawer__navigation-link">Каталог</Link>
-                <Link to="/reviews" className="side-drawer__navigation-link">Відгуки</Link>
-                <Link to="/contact" className="side-drawer__navigation-link">Контакти</Link>
-                <Link to="/aboutUs" className="side-drawer__navigation-link">Про нас</Link>
+                <NavLink exact to="/" className="side-drawer__navigation-link">Головна</NavLink>
+                <NavLink exact to="/catalog" className="side-drawer__navigation-link">Каталог</NavLink>
+                <NavLink exact to="/reviews" className="side-drawer__navigation-link">Відгуки</NavLink>
+                <NavLink exact to="/contact" className="side-drawer__navigation-link">Контакти</NavLink>
+                <NavLink exact to="/aboutUs" className="side-drawer__navigation-link">Про нас</NavLink>
+                <NavLink exact to="/register" className="side-drawer__navigation-link">Register</NavLink>
 
             </nav>
             <div className="side-drawer__contact">

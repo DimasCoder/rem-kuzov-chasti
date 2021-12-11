@@ -36,31 +36,32 @@
 }
 
 .side-drawer__navigation-link{
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 26px;
+    font-weight: 300;
+    font-family: Raleway, sans-serif;
     text-align: center;
     color: #fff;
     transition: 0.25s linear;
     cursor: pointer;
+    text-decoration: none;
     text-transform: uppercase;
-    margin: 0 auto;
+    letter-spacing: 1px;
+    margin: auto 0;
+}
+
+.side-drawer__navigation-link:before{
+    position: relative;
+    content: "\25CF";
+    color: #fab702;
+    margin-right: 8px;
 }
 
 .side-drawer__navigation-link + .side-drawer__navigation-link{
     margin-top: 15px;
 }
 
-.side-drawer__navigation-link:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background-image: linear-gradient(to right, #0a3d5f 0%, #4bb0f5 50%, #0a3d5f 100%);
-    transition: linear .2s;
-}
-
 .side-drawer__navigation-link:hover{
-    color: #fff;
+    color: #fab702;
     transition: 0.2s linear;
     text-decoration: none;
 }
@@ -84,5 +85,5 @@
 }
 
 .side-drawer__contact span{
-    color: rgba(30,132,242,0.9);;
+    color: #fab702;
 }
