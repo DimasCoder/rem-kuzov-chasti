@@ -161,9 +161,9 @@ class App extends Component {
                         <Route exact path="/" render={() => <MainSection cartItems={this.state.cartItems} addToCart={this.addToCart} q={q}/>}/>
                         <Route exact path="/:brand/:model" component={AutoPage}/>
                         <Route exact path={["/", "/home"]} component={Home}/>
-                        <Route exact path="/admin" component={Register}/>
-                        <Route exact path="/signup" component={Login}/>
-                        <Route exact path="/registration" component={Login}/>
+                        <Route exact path="/admin" component={Login}/>
+                        <Route exact path="/signup" component={Register}/>
+                        <Route exact path="/register" component={Register}/>
                         <Route exact path="/checkout"
                                render={() =>
                                    <Checkout
